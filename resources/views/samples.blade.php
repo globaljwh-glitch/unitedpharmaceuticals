@@ -1,164 +1,303 @@
 @extends('layout.app')
 
 @section('content')
-<section class="innerBanner positionRelative">
-    <img src="{{ asset('images/banner/contact-us.jpg') }}" alt="">
-</section>
+    <section class="innerBanner positionRelative">
+        <img src="{{ asset('images/banner/contact-us.jpg') }}" alt="">
+    </section>
 
-<section class="contentContainer">
-    <div class="container">
+    <section class="contentContainer">
+        <div class="container">
 
-        <div class="row">
-            <div class="col-md-11 m-auto text-center">
-                <h2>Request Sample</h2>
-                <p class="mb-0">
-                    We are grateful for the opportunity to show you why United Pharmaceuticals Inc. is the
-                    superior choice for your business.
-                </p>
+            <div class="row">
+                <div class="col-md-11 m-auto text-center">
+                    <h2>Request Sample</h2>
+                    <p class="mb-0">
+                        We value the opportunity to request samples and experience United Pharmaceuticals Inc. as your
+                        trusted partner for your business today.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-11 m-auto">
+                    <div class="formBlockOuter mt-5">
+
+                        @if(session('success'))
+                            <div class="alert alert-success">{{ session('success') }}</div>
+                        @endif
+
+
+                        <form id="sampleForm" method="POST" action="#">
+
+                            @csrf
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>First Name <span>*</span></label>
+                                        <input type="text" name="f_name" class="form-control"
+                                            placeholder="Enter your first name" value="{{ old('f_name') }}">
+                                        @error('f_name') <small class="text-danger">{{ $message }}</small> @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name <span>*</span></label>
+                                        <input type="text" name="l_name" class="form-control"
+                                            placeholder="Enter your last name" value="{{ old('l_name') }}">
+                                        @error('l_name') <small class="text-danger">{{ $message }}</small> @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email Address <span>*</span></label>
+                                        <input type="email" name="email" class="form-control"
+                                            placeholder="example@company.com" value="{{ old('email') }}">
+                                        @error('email') <small class="text-danger">{{ $message }}</small> @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone Number <span>*</span></label>
+                                        <input type="text" name="phone" class="form-control" placeholder="+1 234 567 8900"
+                                            value="{{ old('phone') }}">
+                                        @error('phone') <small class="text-danger">{{ $message }}</small> @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Company Name <span>*</span></label>
+                                        <input type="text" name="company_name" class="form-control"
+                                            placeholder="Your company name" value="{{ old('company_name') }}">
+                                        @error('company_name') <small class="text-danger">{{ $message }}</small> @enderror
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Street Address <span>*</span></label>
+                                                <input class="form-control" type="text" value=""
+                                                    placeholder="Enter your street address" name="address">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 ps-0">
+                                            <div class="form-group">
+                                                <label>City <span>*</span></label>
+                                                <input type="text" name="city" class="form-control"
+                                                    placeholder="Enter your city" value="{{ old('city') }}">
+                                                @error('city') <small class="text-danger">{{ $message }}</small> @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>State <span>*</span></label>
+                                                <input type="text" name="state" class="form-control"
+                                                    placeholder="Enter your state" value="{{ old('state') }}">
+                                                @error('state') <small class="text-danger">{{ $message }}</small> @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 ps-0">
+                                            <div class="form-group">
+                                                <label>Zip Code <span>*</span></label>
+                                                <input type="text" name="zip" class="form-control"
+                                                    placeholder="Postal / Zip code" value="{{ old('zip') }}">
+                                                @error('zip') <small class="text-danger">{{ $message }}</small> @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 ps-0">
+                                            <div class="form-group">
+                                                <label>Country <span>*</span></label>
+                                                <input type="text" name="country" class="form-control"
+                                                    placeholder="Enter your country" value="{{ old('country') }}">
+                                                @error('country') <small class="text-danger">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Our Solutions and Services <span>*</span></label>
+                                        <select name="solutions" class="form-control">
+                                            <option value="">Select a service</option>
+                                            <option value="1" {{ old('solutions') == 1 ? 'selected' : '' }}>Preclinical
+                                                Services
+                                            </option>
+                                            <option value="2" {{ old('solutions') == 2 ? 'selected' : '' }}>Clinical Services
+                                            </option>
+                                            <option value="3" {{ old('solutions') == 3 ? 'selected' : '' }}>Manufacturing and
+                                                Analytical Services</option>
+                                            <option value="4" {{ old('solutions') == 4 ? 'selected' : '' }}>Bioanalytical
+                                                Services
+                                            </option>
+                                            <option value="5" {{ old('solutions') == 5 ? 'selected' : '' }}>Research Support
+                                                Services</option>
+                                            <option value="6" {{ old('solutions') == 6 ? 'selected' : '' }}>Development
+                                                Programs
+                                            </option>
+                                        </select>
+                                        @error('solutions') <small class="text-danger">{{ $message }}</small> @enderror
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>What products are you interested in? <span>*</span></label>
+                                        <textarea name="message" rows="9" class="form-control"
+                                            placeholder="Please describe your requirement or inquiry in detail...">{{ old('message') }}</textarea>
+                                        @error('message') <small class="text-danger">{{ $message }}</small> @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Final application? <span>*</span></label>
+                                        <textarea name="application" rows="9" class="form-control"
+                                            placeholder="Please describe your requirement or inquiry in detail...">{{ old('message') }}</textarea>
+                                        @error('message') <small class="text-danger">{{ $message }}</small> @enderror
+                                    </div>
+                                </div>
+
+                                <input type="hidden" name="type" value="2">
+
+                                <div class="col-md-12">
+                                    <div class="form-group text-end">
+                                        <button type="submit" class="customBtn01 mt-3">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+    <div class="modal fade" id="otpModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0 shadow-lg">
 
-        <div class="row">
-            <div class="col-lg-11 m-auto">
-                <div class="formBlockOuter mt-5">
+                <div class="modal-body p-4 text-center">
 
-                    {{-- Success Message --}}
-                    @if(session('success'))
-                        <div class="alert alert-success">{{ session('success') }}</div>
-                    @endif
-
-                    <form method="POST" action="{{ route('request.sample.store') }}">
-                        @csrf
-
-                        <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>First Name <span>*</span></label>
-                                    <input type="text" name="f_name" class="form-control"
-                                           value="{{ old('f_name') }}">
-                                    @error('f_name') <small class="text-danger">{{ $message }}</small> @enderror
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Last Name <span>*</span></label>
-                                    <input type="text" name="l_name" class="form-control"
-                                           value="{{ old('l_name') }}">
-                                    @error('l_name') <small class="text-danger">{{ $message }}</small> @enderror
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Email Address <span>*</span></label>
-                                    <input type="email" name="email" class="form-control"
-                                           value="{{ old('email') }}">
-                                    @error('email') <small class="text-danger">{{ $message }}</small> @enderror
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Phone Number <span>*</span></label>
-                                    <input type="text" name="phone" class="form-control"
-                                           value="{{ old('phone') }}">
-                                    @error('phone') <small class="text-danger">{{ $message }}</small> @enderror
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Company Name <span>*</span></label>
-                                    <input type="text" name="company_name" class="form-control"
-                                           value="{{ old('company_name') }}">
-                                    @error('company_name') <small class="text-danger">{{ $message }}</small> @enderror
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label>Our Solutions and Services <span>*</span></label>
-                                <select name="solutions" class="form-control" style="height:50px !important;">
-                                    <option value="">--Select--</option>
-                                    @foreach([
-                                        'Preclinical Services',
-                                        'Clinical Services',
-                                        'Manufacturing and Analytical Services',
-                                        'Bioanalytical Services',
-                                        'Research Support Services',
-                                        'Development Programs'
-                                    ] as $solution)
-                                        <option value="{{ $solution }}" {{ old('solutions') == $solution ? 'selected' : '' }}>
-                                            {{ $solution }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                                @error('solutions') <small class="text-danger">{{ $message }}</small> @enderror
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>City <span>*</span></label>
-                                    <input type="text" name="city" class="form-control"
-                                           value="{{ old('city') }}">
-                                    @error('city') <small class="text-danger">{{ $message }}</small> @enderror
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>State <span>*</span></label>
-                                    <input type="text" name="state" class="form-control"
-                                           value="{{ old('state') }}">
-                                    @error('state') <small class="text-danger">{{ $message }}</small> @enderror
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Zip Code <span>*</span></label>
-                                    <input type="text" name="zip" class="form-control"
-                                           value="{{ old('zip') }}">
-                                    @error('zip') <small class="text-danger">{{ $message }}</small> @enderror
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Country <span>*</span></label>
-                                    <input type="text" name="country" class="form-control"
-                                           value="{{ old('country') }}">
-                                    @error('country') <small class="text-danger">{{ $message }}</small> @enderror
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Your Message <span>*</span></label>
-                                    <textarea name="message" rows="9" class="form-control">{{ old('message') }}</textarea>
-                                    @error('message') <small class="text-danger">{{ $message }}</small> @enderror
-                                </div>
-                            </div>
-
-                            <input type="hidden" name="type" value="1">
-                            
-
-                            <div class="col-md-12">
-                                <div class="form-group text-end">
-                                    <input type="submit" value="SUBMIT"
-                                           class="btn btn-primary btn-lg customBtn01"
-                                           style="width:200px;">
-                                </div>
-                            </div>
-
+                    <!-- Icon -->
+                    <div class="mb-3">
+                        <div style="
+                                                                            width:70px;
+                                                                            height:70px;
+                                                                            border-radius:50%;
+                                                                            background:#e9f2ff;
+                                                                            display:flex;
+                                                                            align-items:center;
+                                                                            justify-content:center;
+                                                                            margin:auto;">
+                            <i class="fas fa-shield-alt text-primary" style="font-size:32px;"></i>
                         </div>
-                    </form>
+                    </div>
+
+                    <h5 class="fw-bold mb-1">Email Verification</h5>
+                    <p class="text-muted mb-3" style="font-size:14px;">
+                        Enter the 6-digit code sent to your email
+                    </p>
+
+                    <!-- OTP Input -->
+                    <input type="text" id="otpInput" class="form-control text-center mb-3" style="
+                                                                               letter-spacing:12px;
+                                                                               font-size:24px;
+                                                                               font-weight:600;
+                                                                               border-radius:8px;" maxlength="6"
+                        placeholder="● ● ● ● ● ●">
+
+                    <!-- Verify Button -->
+                    <button class="btn btn-primary w-100 py-2" id="verifyOtpBtn" disabled>
+                        Verify & Submit
+                    </button>
+
+                    <!-- Info -->
+                    <small class="text-muted d-block mt-3">
+                        Didn’t receive the code? Check spam folder
+                    </small>
+
+                    <!-- Resend -->
+                    <!-- <small class="d-block mt-2">
+                                    <a href="javascript:void(0)" id="resendOtp" class="text-primary">
+                                        Resend OTP
+                                    </a>
+                                </small> -->
 
                 </div>
             </div>
         </div>
-
     </div>
-</section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        $('#sampleForm').submit(function (e) {
+            e.preventDefault();
+
+            let formData = $(this).serialize();
+
+            Swal.fire({
+                title: 'Sending OTP...',
+                text: 'Please wait while we verify your email',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            $.post("{{ route('career_sendOtp') }}", formData, function () {
+                Swal.close();
+                $('#otpModal').modal('show');
+            }).fail(function () {
+                Swal.fire('Error', 'Failed to send OTP. Try again.', 'error');
+            });
+        });
+
+        $('#verifyOtpBtn').click(function () {
+
+            let otp = $('#otpInput').val();
+
+            if (otp.length !== 6) {
+                Swal.fire('Invalid OTP', 'Please enter 6 digit OTP', 'warning');
+                return;
+            }
+
+            let formData = $('#sampleForm').serialize() + '&otp=' + otp;
+
+            Swal.fire({
+                title: 'Verifying...',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            $.post("{{ route('request.sample.store') }}", formData, function (res) {
+
+                if (res.status === 'success') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Application Submitted!',
+                        text: 'Thank you. We will contact you soon.',
+                        confirmButtonColor: '#0d6efd'
+                    }).then(() => {
+                        location.reload();
+                    });
+                } else {
+                    Swal.fire('Error', res.message, 'error');
+                }
+
+            }).fail(function () {
+                Swal.fire('Error', 'Server error. Try again.', 'error');
+            });
+        });
+
+        $('#otpInput').on('input', function () {
+            if ($(this).val().length === 6) {
+                $('#verifyOtpBtn').prop('disabled', false);
+            } else {
+                $('#verifyOtpBtn').prop('disabled', true);
+            }
+        });
+    </script>
 @endsection

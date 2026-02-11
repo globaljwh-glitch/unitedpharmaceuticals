@@ -1,23 +1,22 @@
 @extends('layout.app')
 @section ('content')
     <section class="innerBanner positionRelative">
-        <img src="images/banner/banner-slider-02.jpg" alt="">
+        <img src="{{ asset('images/banner/banner-slider-02.jpg') }}" alt="">
     </section>
     <section class="contentContainer background01">
         <div class="container">
             <div class="row">
                 <div class="col-md-11 m-auto text-center">
-                    <h2>ABOUT US</h2>
-                    <p class="mb-0">At United Pharmaceuticals Inc., we specialize in contract manufacturing of top-quality
-                        pharmaceutical ingredients, excipients, machinery, equipment, and packaging materials to a global
-                        market. With a robust distribution network, we proudly serve over 253 customers worldwide. Our
-                        diverse portfolio includes Active Pharmaceutical Ingredients (APIs) such as anti-cancers,
-                        MRI-enhancing agents, CNS agents, respiratory agents, vitamin D derivatives, anti-inflammatory and
-                        analgesic agents, polymeric drugs, immunomodulators, steroids, and antibiotics. We also supply a
-                        wide range of excipients, including additives, colors, sweeteners, preservatives, and fillers.
-                        Committed to quality and safety, we adhere to rigorous standards, ensuring our products and services
-                        meet the highest expectations. At United Pharmaceuticals, we aim to empower healthcare innovation
-                        and improve lives globally. </p>
+                    <h2>Who We Are</h2>
+                    <p class="mb-0">United Pharmaceuticals Inc. is a science-driven organization focused on supporting the
+                        pharmaceutical ecosystem through reliable manufacturing, sourcing, and supply solutions. Built on
+                        technical expertise and disciplined processes, we work closely with partners across the healthcare
+                        value chain to deliver materials and solutions that meet stringent quality, regulatory, and
+                        performance expectations. Our approach combines operational rigor with long-term collaboration,
+                        enabling us to support both established programs and evolving development needs across global
+                        markets. We emphasize transparency, accountability, and continuous improvement to ensure confidence
+                        at every stage of engagement.
+                    </p>
                 </div>
             </div>
         </div>
@@ -26,20 +25,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex">
-                    <img src="images/our-unique-approach.jpg" alt="Our Unique Approach"
+                    <img src="{{ asset('images/our-unique-approach.jpg') }}" alt="Our Unique Approach"
                         class="imgResponsive thumbImageLeft">
                 </div>
                 <div class="col-md-6 d-flex">
                     <div class="d-flex align-items-center">
                         <div>
-                            <h2>Our Unique Approach</h2>
-                            <p>At United Pharmaceuticals Inc., we design tailored development strategies supported by
-                                real-time data, seamless communication channels, and cohesive project coordination. Our
-                                integrated approach ensures faster progression toward product validation, combining
-                                accuracy, efficiency, and transparency at every stage. With a focus on collaboration and
-                                adaptability, we align our processes with your unique project goals. By uniting science,
-                                technology, and expertise, we deliver reliable results that move your innovations from
-                                concept to commercialization with confidence.</p>
+                            <h2>Our Capabilities</h2>
+
+                            <p class="highlightText">Our operations are structured to support a wide spectrum of
+                                pharmaceutical requirements, including</p>
+                            <ul class="listing01">
+                                <li>Contract manufacturing and supply support
+                                </li>
+                                <li>Pharmaceutical ingredients and excipient solutions</li>
+                                <li>Machinery, equipment, and packaging material sourcing</li>
+                                <li>Quality oversight and regulatory-aligned processes</li>
+                                <li>Scalable solutions for domestic and international markets</li>
+                            </ul>
+                            <p class="highlightText">Each capability is backed by defined controls, technical evaluation,
+                                and consistent performance monitoring.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -52,18 +58,19 @@
                 <div class="col-md-12">
                     <div class="productImgThumbOuter d-flex justify-content-end align-items-center positionRelative">
                         <div class="ourPurposeImgThumb ourPurposeImgThumb01 order-sm-1 order-0">
-                            <img src="images/purpose-thumb-01.jpg" class="imgResponsive">
+                            <img src="{{ asset('images/purpose-thumb-01.jpg') }}" class="imgResponsive">
                         </div>
                         <div class="ourPurposeImgThumb ourPurposeImgThumb02 order-sm-2 order-0">
-                            <img src="images/purpose-thumb-02.jpg" class="imgResponsive">
+                            <img src="{{ asset('images/purpose-thumb-02.jpg') }}" class="imgResponsive">
                         </div>
                         <div class="ourPurposeContentBox order-sm-0 order-1">
-                            <h2>OUR PURPOSE</h2>
-                            <p>Our mission is to accelerate the creation of life-enhancing pharmaceutical solutions through
-                                integrated development and manufacturing expertise. Our foundation rests on strong values:
-                                quality in every detail, integrity in every action, respect for every partnership, and a
-                                relentless pursuit of excellence. These principles drive us to deliver impactful results
-                                with a human touch.</p>
+                            <h2>OUR CORE VALUES</h2>
+                            <p>At United Pharmaceuticals Inc., quality is driven by disciplined systems rather than isolated
+                                controls. Our operating philosophy emphasizes proactive risk evaluation, controlled
+                                documentation, and process validation to ensure compliance with relevant regulatory
+                                standards. This structured foundation supports consistency, accountability, and continuous
+                                improvement across all operations.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -82,7 +89,7 @@
                     </div>
                     <div class="mapSection">
                         <div class="row">
-                            <div class="col-lg-6 mapBg flexCol p-0"><img src="images/ufc-map.png" alt=""
+                            <div class="col-lg-6 mapBg flexCol p-0"><img src="{{ asset('images/ufc-map.png') }}" alt=""
                                     class="imgResponsive"></div>
                             <div class="col-lg-6 flexCol">
                                 <ul class="countryListWedoBussiness">
@@ -143,19 +150,19 @@
         </div>
     </section>
     <!-- <section class="contentContainer greyBg signUpNewsletterBlock text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Sign up for exclusive content</h2>
-                    <p>Join our list of 30,000+ VIP members and have access to our exclusive content.</p>
-                    <div class="signUpNewsletter">
-                        <form>
-                            <input type="text" value="" placeholder="Enter your email address here">
-                            <input type="submit" value="Subscribe Now!" class="btn customBtn01" name="">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h2>Sign up for exclusive content</h2>
+                                                    <p>Join our list of 30,000+ VIP members and have access to our exclusive content.</p>
+                                                    <div class="signUpNewsletter">
+                                                        <form>
+                                                            <input type="text" value="" placeholder="Enter your email address here">
+                                                            <input type="submit" value="Subscribe Now!" class="btn customBtn01" name="">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section> -->
 @endsection

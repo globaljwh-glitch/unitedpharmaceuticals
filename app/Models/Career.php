@@ -13,7 +13,8 @@ protected $table = 'careers';
      protected $fillable = [
         'title',
         'description',
-        'status'
+        'status',
+        'slug'
      ];
 
 }

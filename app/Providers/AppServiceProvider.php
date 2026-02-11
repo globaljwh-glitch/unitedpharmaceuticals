@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Providers;
-
+use App\Models\Category;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +23,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('*', function ($view) {
+
+            $menuCategories = Category::whereNull('parent_id')
+                ->where('status', 1)
+                ->with('children')
+                ->orderBy('sort_order')
+                ->get();
+
+            $view->with('menuCategories', $menuCategories);
+        });
     }
 }

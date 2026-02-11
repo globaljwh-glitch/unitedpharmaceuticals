@@ -41,18 +41,18 @@
                     <span class="flaticon-user-12"></span>
                 </a>
                 <div class="dropdown-menu  position-absolute" aria-labelledby="userProfileDropdown">
-                     <a class="dropdown-item" href="#">
+                     <!-- <a class="dropdown-item" href="#">
                         <i class="mr-1 flaticon-user-6"></i> <span>My Profile</span>
-                    </a>
+                    </a> -->
                     <!-- <a class="dropdown-item" href="apps_scheduler.html">
                         <i class="mr-1 flaticon-calendar-bold"></i> <span>My Schedule</span>
                     </a>
                     <a class="dropdown-item" href="apps_mailbox.html">
                         <i class="mr-1 flaticon-email-fill-1"></i> <span>My Inbox</span>
                     </a>-->
-                    <a class="dropdown-item" href="{{ route('password.request') }}">
+                    <!-- <a class="dropdown-item" href="{{ route('password.request') }}">
                         <i class="mr-1 flaticon-lock-2"></i> <span>Change Password</span>
-                    </a> 
+                    </a>  -->
                     <div class="dropdown-divider"></div>
                 
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();

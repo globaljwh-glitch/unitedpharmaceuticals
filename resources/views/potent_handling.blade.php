@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="innerBanner positionRelative">
-        <img src="images/banner/banner-slider-02.jpg" alt="">
+        <img src="{{ asset('images/banner/banner-slider-02.jpg') }}" alt="">
     </section>
     <section class="contentContainer background01">
         <div class="container">
@@ -44,7 +44,7 @@
                         procedures and clearance limits. Performance-based exposure control limit (PB-ECL) is then used to
                         correctly classify the compound (Class 1 to Class 4).</p><br>
                     <div class="col-md-12 d-flex">
-                        <img src="images/Graph_Potent-Compound-Classification.png" alt=""
+                        <img src="{{ asset('images/Graph_Potent-Compound-Classification.png') }}" alt=""
                             class="imgResponsive thumbImageLeft">
                     </div>
                 </div>

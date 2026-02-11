@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>United Pharmaceuticals</title>
-    <link rel="icon" href="{{ asset('images/logo-upi.png') }}" type="image/gif" sizes="16x16">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon/favicon-32x32.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/favicon/apple-touch-icon.png') }}">
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     <link href="{{ asset('admin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
@@ -67,7 +69,9 @@
 
         @yield('content')
 
-        @yield('scripts')
+
+
+
         <!--  END CONTENT PART  -->
 
     </div>
@@ -77,6 +81,14 @@
     @include('admin.layout.footer')
 
 
+    @yield('scripts')
+    <script>
+        $(document).ready(function () {
+            $('#zero-config').DataTable({
+                pageLength: 20
+            });
+        });
+    </script>
 
 </body>
 

@@ -3,7 +3,7 @@
 @section('content')
 
     <section class="innerBanner positionRelative">
-        <img src="images/banner/banner-slider-02.jpg" alt="">
+        <img src="{{ asset('images/banner/banner-slider-02.jpg') }}" alt="">
     </section>
     <section class="contentContainer background01">
         <div class="container">

@@ -18,7 +18,7 @@
             <div class="card shadow-sm border-0">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover table-striped align-middle">
+                        <table id="zero-config" class="table table-hover table-striped align-middle">
                             <thead class="thead-dark">
                                 <tr>
                                     <th>#</th>
@@ -32,7 +32,7 @@
                                     <th>Country</th>
                                     <th>Zip</th>
                                     <th>Message</th>
-                                    <th class="text-center">Action</th>
+                                    <!-- <th class="text-center">Action</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -78,22 +78,22 @@
                                         </td>
 
                                         <!-- ACTION -->
-                                        <td class="text-center">
-                                            <a href="#"
-                                                class="btn btn-sm btn-outline-primary">
-                                                View
-                                            </a>
+                                        <!-- <td class="text-center">
+                                                    <a href="#"
+                                                        class="btn btn-sm btn-outline-primary">
+                                                        View
+                                                    </a>
 
-                                            <form action="#" method="POST"
-                                                class="d-inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button class="btn btn-sm btn-outline-danger"
-                                                    onclick="return confirm('Are you sure?')">
-                                                    Delete
-                                                </button>
-                                            </form>
-                                        </td>
+                                                    <form action="#" method="POST"
+                                                        class="d-inline">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="btn btn-sm btn-outline-danger"
+                                                            onclick="return confirm('Are you sure?')">
+                                                            Delete
+                                                        </button>
+                                                    </form>
+                                                </td> -->
                                     </tr>
                                 @empty
                                     <tr>
@@ -106,13 +106,11 @@
                         </table>
                     </div>
 
-                    <!-- Pagination -->
-                    <div class="mt-3 d-flex justify-content-end">
-                        {{ $contact_req->links() }}
-                    </div>
+
 
                 </div>
             </div>
         </div>
     </div>
+
 @endsection

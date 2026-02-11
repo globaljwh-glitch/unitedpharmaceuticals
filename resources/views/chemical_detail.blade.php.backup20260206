@@ -1,0 +1,188 @@
+@extends('layout.app')
+
+@section('content')
+ <style>
+        .searchProduct {
+            margin-top: 30px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 13px 15px;
+            background: rgba(0, 0, 0, 0.04) !important;
+        }
+
+        .productListTable.table>thead>tr>th {
+            vertical-align: middle;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+            line-height: 22px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #2f07be;
+            padding: 12px 20px 12px 12px;
+            border-top: 1px solid rgb(221, 221, 221);
+            background: #2114b4;
+        }
+
+        .productListTable.table tr td {
+            line-height: 22px !important;
+            padding: 12px 12px;
+            color: #6a6a6a;
+            background-color: #fff;
+        }
+
+        .productListTable.table tr td a {
+            color: #6a6a6a;
+        }
+
+        .productListTable.table tr td a:hover {
+            color: #041438;
+        }
+
+        .productListTable.table-striped>tbody>tr:nth-of-type(odd)>* {
+            background-color: #f7f7f7 !important;
+            border-top: 1px solid #e3e6ec;
+        }
+    </style>
+    <section class="innerBanner positionRelative">
+        <img src="{{ asset('images/banner/contact-us.jpg') }}" alt="">
+    </section>
+
+    <section class="contentContainer positionRelative">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Basic Info Table -->
+                    <div class="productTable mt-0">
+                        <h3>{{ $product->product_name }}</h3>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td><strong>CAS Number:</strong></td>
+                                    <td>{{ $product->cas_number }}</td>
+                                    <td><strong>Formula:</strong></td>
+                                    <td>{{ $product->empirical_formula }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Brand Name:</strong></td>
+                                    <td>IPC</td>
+                                    <td><strong>Molecular Weight:</strong></td>
+                                    <td>{{ $product->molecular_weight }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Product Details Table -->
+                    <div class="productTable">
+                        <h3 class="mt-5">Product Detail</h3>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Appearance:</strong></td>
+                                    <td>{{ $product->appearance }}</td>
+                                </tr>
+
+                                <!-- Functional Category as bullet points -->
+                                <tr>
+                                    <td><strong>Functional Category:</strong></td>
+                                    <td>
+                                        @if($product->functional_category)
+                                            <ul>
+                                                @foreach(explode(';', $product->functional_category) as $item)
+                                                    @if(trim($item))
+                                                        <li>{{ trim($item) }}</li>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                    </td>
+                                </tr>
+
+                                <!-- Applications as bullet points -->
+                                <tr>
+                                    <td><strong>Applications:</strong></td>
+                                    <td>
+                                        @if($product->applications)
+                                            <ul>
+                                                @foreach(explode(';', $product->applications) as $item)
+                                                    @if(trim($item))
+                                                        <li>{{ trim($item) }}</li>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                    </td>
+                                </tr>
+
+                                <!-- Synonyms as bullet points -->
+                                <tr>
+                                    <td><strong>Synonyms:</strong></td>
+                                    <td>
+                                        @if($product->synonyms)
+                                            <ul>
+                                                @foreach(explode(';', $product->synonyms) as $item)
+                                                    @if(trim($item))
+                                                        <li>{{ trim($item) }}</li>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                    </td>
+                                </tr>
+
+                                <!-- Storage Conditions as bullet points -->
+                                <tr>
+                                    <td><strong>Storage Conditions:</strong></td>
+                                    <td>
+                                        @if($product->storage_conditions)
+                                            <ul>
+                                                @foreach(explode(';', $product->storage_conditions) as $item)
+                                                    @if(trim($item))
+                                                        <li>{{ trim($item) }}</li>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Stability:</strong></td>
+                                    <td>{{ $product->stability }}</td>
+                                </tr>
+
+                                <!-- Regulatory Status as bullet points -->
+                                <tr>
+                                    <td><strong>Regulatory Status:</strong></td>
+                                    <td>
+                                        @if($product->regulatory_status)
+                                            <ul>
+                                                @foreach(explode(';', $product->regulatory_status) as $item)
+                                                    @if(trim($item))
+                                                        <li>{{ trim($item) }}</li>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Comments:</strong></td>
+                                    <td>{{ $product->comments }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Back Button -->
+                    <div class="mt-3">
+                        <a href="{{ route('all_chemicals') }}" class="customBtn01">Back to Products</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

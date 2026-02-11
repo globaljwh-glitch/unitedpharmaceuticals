@@ -197,7 +197,7 @@ ul.listing01 {
 }
 /*----------------------------- Navigation Block ------------------------------------------*/
 .topBar {
-    padding: 10px 17px;
+    padding: 7px 15px;
     color: #f7f7f7;
 }
 .topBar .topInfoList {
@@ -240,7 +240,7 @@ button.search-submit {
     padding: 0px 10px;
 }
 header {
-	padding: 14px 10px 14px 10px;
+	padding: 10px;
     position: relative;
 	background-color: #fff;
 }
@@ -488,6 +488,7 @@ ul.subMenu li.dropdown:hover .submenu-02 {
   transition: transform 0.8s;
   transform-style: preserve-3d;
   position: relative;
+  height: 275px;
 }
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -505,8 +506,9 @@ ul.subMenu li.dropdown:hover .submenu-02 {
 }
 .flip-card-front h5 {
     height: 80px;
-    padding: 0px 35px 0px 15px;
+    padding: 12px 35px 12px 15px;
     position: relative;
+    margin-bottom: 0px;
 }
 .flip-card-front h5::after {
   content: "+";
@@ -520,16 +522,17 @@ ul.subMenu li.dropdown:hover .submenu-02 {
   color: #54a651;
 }
 .flip-card-back {
-    padding: 20px;
+    padding: 15px;
 }
 .flip-card-back h4 {
     color: #fff;
+    font-size: 17px;
 }
 .flip-card-back p {
     font-size: 15px;
     line-height: 22px;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 .flip-card-front {
   background: #f7f7f7;
@@ -590,7 +593,11 @@ button.accordion-button {
     width: 100%;
 }
 /*------------------------ Product, Table and Pagination ---------------------*/
-
+.eventTable th {
+    background: rgb(33, 33, 222);
+    color: #fff;
+    font-weight: 600;
+}
 /*----------------------------- Form ------------------------------------------*/
 .signUpNewsletter input {
     width: 100%;
@@ -612,7 +619,7 @@ button.accordion-button {
     margin-top: 40px;
     font-size: 18px;
 }
-.form-group input {
+.form-group input, .form-group select {
     height: 50px;
     margin-bottom: 10px;
 }
@@ -680,6 +687,14 @@ footer a:hover {
     text-decoration: underline;
 }
 
+label span {
+    color: rgb(255, 0, 0);
+    font-weight: 500;
+}
+textarea.form-control {
+    height: 319px;
+    margin-bottom: 10px;
+}
 
 /*----------------------------- Responsive ------------------------------------------*/
 
@@ -693,6 +708,176 @@ footer a:hover {
     .bannerContent p {
         font-size: 17px;
         line-height: 26px;
+    }
+
+    .topBar {
+    padding: 4px 15px;
+}
+header {
+    padding: 6px 10px;
+}
+  body {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 37px;
+  }
+
+  p, li {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  h3 {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .contentContainer {
+    padding: 80px 0 80px 0;
+    position: relative;
+}
+
+  .topBar .topInfoList li a {
+    color: #0e1b2c;
+    font-size: 13px;
+}
+
+
+  .nav-item .nav-link {
+    font-size: 14px;
+}
+
+.navbar-brand {
+    padding: 0;
+    max-width: 194px;
+}
+
+.customBtn01 {
+    padding: 13px;
+    line-height: 23px;
+    font-size: 14px;
+    margin-top: 35px;
+}
+  .subMenu li a {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 6px 13px;
+  }
+
+ .countryListWedoBussiness li {
+    padding: 4px 8px 2px 8px;
+    font-size: 14px;
+  }
+
+  .signUpNewsletter input {
+    font-size: 16px;
+    padding: 7px 14px;
+    height: 55px;
+    }
+
+    .ourUniqueApproach .thumbImageLeft {
+        max-width: 520px;
+    }
+
+    .infoBlockPharma img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 250px;
+    object-position: top center;
+    }
+
+    .infoBlockPosition {
+    padding: 50px 38px;
+
+    }
+
+    .ourPurposeImgThumb {
+    margin-left: 7px;
+    width: 31%;
+}
+
+.manufactProductCat img {
+    height: inherit;
+    max-width: 265px;
+}
+.flip-card-inner {
+  height: 245px;
+}
+.flip-card-front h5 {
+    height: 70px;
+    padding: 12px 35px 12px 15px;
+    font-size: 13px;
+}
+.flip-card-back {
+    padding: 15px;
+}
+.flip-card-back h4 {
+    font-size: 15px;
+}
+.flip-card-back p {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+.accordion-header button {
+    font-size: 16px;
+}
+  footer ul li a,
+  footer a {
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 5px;
+  }
+
+  footer h4.text-white.borderBottom {
+    padding-bottom: 12px;
+}
+footer h4 a {
+    font-size: 18px;
+    }
+
+  footer .borderBottom {
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+}
+
+  .copyRight {
+    font-size: 13px;
+  }
+
+ .form-group input, .form-group select, textarea.form-control {
+    height: 45px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+textarea.form-control {
+    height: 294px;
+}
+
+label, textarea.form-control {
+    font-size: 14px;
+}
+
+}
+@media (max-width: 1400px) {
+    .manufactProductCat img {
+        height: inherit;
+        max-width: 100%;
+    }
+    .flip-card-front h5 {
+        height: inherit;
+        padding: 12px 35px 12px 15px;
+        font-size: 12px;
     }
 }
 @media (max-width: 1345px) {
@@ -913,11 +1098,11 @@ footer a:hover {
         line-height: 34px;
     }
     p, li {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 26px;
     }
     h4 {
-        font-size: 19px;
+        font-size: 18px;
         padding: 0 0 7px 0;
     }
     .customBtn01 {
@@ -967,6 +1152,25 @@ footer a:hover {
     footer .borderBottom {
         margin-bottom: 15px;
     }
+
+   .flip-card-inner {
+        height: 230px;
+    }
+    .flip-card-front h5 {
+        padding: 7px 35px 8px 15px;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .flip-card-back {
+        display: none;
+    }
+    .flip-card-back p {
+        font-size: 11px;
+        line-height: 15px;
+        max-height: 76px;
+    }
+
 }
 @media (max-width: 991px) {
 
@@ -982,21 +1186,7 @@ footer a:hover {
         font-size: 15px;
         line-height: 22px;
     }
-	.flip-card-back p {
-        font-size: 11px;
-        line-height: 15px;
-        max-height: 76px;
-    }
-    .flip-card-back h4 {
-        color: #fff;
-        font-size: 14px;
-    }
-    .flip-card-front h5 {
-        font-size: 12px;
-        word-wrap: break-word;
-        word-break: break-word;
-        line-height: 14px;
-    }
+	
     .contentContainer {
         padding: 50px 0 50px 0;
     }
@@ -1041,9 +1231,6 @@ footer a:hover {
     }
     .infoBlockPosition {
         padding: 20px 30px;
-    }
-    .infoBlockPharmaManufList img {
-        max-width: 200px;
     }
     .countryListWedoBussiness li {
         margin: 0 7px;
@@ -1153,6 +1340,24 @@ footer a:hover {
         max-height: 400px;
         overflow: hidden;
     }
+    .ps-0 {
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .form-group input, .form-group select {
+        height: 40px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    label {
+        font-size: 14px;
+    }
+    textarea.form-control {
+        height: 140px;
+        font-size: 14px;
+    }
+    .flip-card-inner {
+      height: 245px;
+    }
 }
 @media (max-width: 575.98px) {
     .flip-card {
@@ -1169,6 +1374,10 @@ footer a:hover {
     }
     .ourPurposeImgThumb01 {
         display: none;
+    }
+    .flip-card-inner {
+        height: inherit;
+        padding: 12px 35px 12px 15px;
     }
     
 }
@@ -1193,6 +1402,15 @@ footer a:hover {
     }
     .ourPurposeImgThumb02 {
         display: none;
+    }
+    .searchSite.d-flex {
+        width: 100%;
+    }
+    .searchSite input {
+        width: 100%;
+    }
+    .topBar {
+        padding: 6px 8px;
     }
 }
 @media (max-width: 500px) {

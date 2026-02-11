@@ -9,16 +9,16 @@
         </div>
         <div class="mainBannerBlockSlider">
             <div class="bannerImage">
-                <img src="images/banner/banner-slider-01.jpg" alt="" class="imgResponsive">
+                <img src="{{ asset('images/banner/banner-slider-01.jpg') }}" alt="" class="imgResponsive">
             </div>
             <div class="bannerImage">
-                <img src="images/banner/banner-slider-02.jpg" alt="" class="imgResponsive">
+                <img src="{{ asset('images/banner/banner-slider-02.jpg') }}" alt="" class="imgResponsive">
             </div>
             <div class="bannerImage">
-                <img src="images/banner/banner-slider-03.jpg" alt="" class="imgResponsive">
+                <img src="{{ asset('images/banner/banner-slider-03.jpg') }}" alt="" class="imgResponsive">
             </div>
             <div class="bannerImage">
-                <img src="images/banner/banner-slider-04.jpg" alt="" class="imgResponsive">
+                <img src="{{ asset('images/banner/banner-slider-04.jpg') }}" alt="" class="imgResponsive">
             </div>
         </div>
         <div class="mainBannerSliderPagination"></div>
@@ -28,17 +28,15 @@
             <div class="row">
                 <div class="col-md-11 m-auto text-center">
                     <h2>ABOUT US</h2>
-                    <p class="mb-0">At United Pharmaceuticals Inc., we specialize in contract manufacturing of top-quality
-                        pharmaceutical ingredients, excipients, machinery, equipment, and packaging materials to a global
-                        market. With a robust distribution network, we proudly serve over 253 customers worldwide. Our
+                    <p class="mb-0">With a robust distribution network, we proudly serve over 253 customers worldwide. Our
                         diverse portfolio includes Active Pharmaceutical Ingredients (APIs) such as anti-cancers,
                         MRI-enhancing agents, CNS agents, respiratory agents, vitamin D derivatives, anti-inflammatory and
                         analgesic agents, polymeric drugs, immunomodulators, steroids, and antibiotics. We also supply a
                         wide range of excipients, including additives, colors, sweeteners, preservatives, and fillers.
                         Committed to quality and safety, we adhere to rigorous standards, ensuring our products and services
-                        meet the highest expectations. At United Pharmaceuticals, we aim to empower healthcare innovation
-                        and improve lives globally. </p>
-                    <a href="#" class="customBtn01">LEARN MORE</a>
+                        meet the highest expectations. We aim to empower healthcare innovation and improve lives globally.
+                    </p>
+                    <a href="{{ route('about') }}" class="customBtn01">LEARN MORE</a>
                 </div>
             </div>
         </div>
@@ -47,7 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex">
-                    <img src="images/our-unique-approach.jpg" alt="Our Unique Approach"
+                    <img src="{{ asset('images/our-unique-approach.jpg') }}" alt="Our Unique Approach"
                         class="imgResponsive thumbImageLeft">
                 </div>
                 <div class="col-md-6 d-flex">
@@ -73,18 +71,19 @@
                 <div class="col-md-12">
                     <div class="productImgThumbOuter d-flex justify-content-end align-items-center positionRelative">
                         <div class="ourPurposeImgThumb ourPurposeImgThumb01 order-sm-1 order-0">
-                            <img src="images/purpose-thumb-01.jpg" class="imgResponsive">
+                            <img src="{{ asset('images/purpose-thumb-01.jpg') }}" class="imgResponsive">
                         </div>
                         <div class="ourPurposeImgThumb ourPurposeImgThumb02 order-sm-2 order-0">
-                            <img src="images/purpose-thumb-02.jpg" class="imgResponsive">
+                            <img src="{{ asset('images/purpose-thumb-02.jpg') }}" class="imgResponsive">
                         </div>
                         <div class="ourPurposeContentBox order-sm-0 order-1">
                             <h2>OUR PURPOSE</h2>
-                            <p>Our mission is to accelerate the creation of life-enhancing pharmaceutical solutions through
-                                integrated development and manufacturing expertise. Our foundation rests on strong values:
-                                quality in every detail, integrity in every action, respect for every partnership, and a
-                                relentless pursuit of excellence. These principles drive us to deliver impactful results
-                                with a human touch.</p>
+                            <p>We strive to accelerate the creation of life-enhancing pharmaceutical solutions through
+                                integrated development and manufacturing expertise. Our foundation is built on strong
+                                values: quality in every detail, integrity in every action, respect in every partnership,
+                                and a relentless pursuit of excellence. These principles guide us in delivering meaningful
+                                outcomes with a human-centered approach.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +107,8 @@
                     <div class="col-md-12">
                         <div
                             class="infoBlockPharma d-flex align-items-stretch justify-content-start align-items-center bg-white">
-                            <div class="d-flex"><img src="images/contract-manufacturing-services.jpg" alt=""></div>
+                            <div class="d-flex"><img src="{{ asset('images/contract-manufacturing-services.jpg') }}" alt="">
+                            </div>
                             <div class="infoBlockPosition infoBlockPositionRight d-flex align-items-center">
                                 <div>
                                     <h4>Pharmaceutical CDMO and Contract Manufacturing Services</h4>
@@ -121,8 +121,8 @@
                                         manage APIs and highly potent APIs. Collaborate with our expert CDMO team to see how
                                         our end-to-end pharmaceutical manufacturing solutions can seamlessly align with your
                                         development goals.</p>
-                                    <a href="{{ route('contact') }}" class="customBtn01 customBtn01Small me-2">Contact Our Expert</a><a href="#"
-                                        class="customBtn01 customBtn01Small">Know More</a>
+                                    <a href="{{ route('contact') }}" class="customBtn01 customBtn01Small me-2">Contact Our
+                                        Expert</a>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +130,8 @@
                     <div class="col-md-12">
                         <div
                             class="infoBlockPharma d-flex align-items-stretch justify-content-start align-items-center bg-white">
-                            <div class="order-md-1 order-0"><img src="images/our-pharmaceutical-cdmo.jpg" alt=""></div>
+                            <div class="order-md-1 order-0"><img src="{{ asset('images/our-pharmaceutical-cdmo.jpg') }}"
+                                    alt=""></div>
                             <div
                                 class="infoBlockPosition infoBlockPositionLeft order-md-0 order-1 d-flex align-items-center">
                                 <div>
@@ -144,8 +145,8 @@
                                         and produced nearly every major pharmaceutical dosage form, including tablets,
                                         liquid- and powder-filled capsules, over-encapsulated formulations, nanomilled
                                         suspensions, creams, gels, powders, and terminally sterilized injectables.</p>
-                                    <a href="{{ route('contact') }}" class="customBtn01 customBtn01Small">Contact Our Expert</a> <a href="#"
-                                        class="customBtn01 customBtn01Small">Know More</a>
+                                    <a href="{{ route('contact') }}" class="customBtn01 customBtn01Small">Contact Our
+                                        Expert</a>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +154,7 @@
                     <div class="col-md-12">
                         <div
                             class="infoBlockPharma d-flex align-items-stretch justify-content-start align-items-center bg-white">
-                            <div><img src="images/drug-product-manufacturing.jpg" alt=""></div>
+                            <div><img src="{{ asset('images/drug-product-manufacturing.jpg') }}" alt=""></div>
                             <div class="infoBlockPosition infoBlockPositionRight d-flex align-items-center">
                                 <div>
                                     <h4>Drug Product Manufacturing</h4>
@@ -170,268 +171,57 @@
                                         <li>Continuous environmental monitoring with real-time temperature, humidity, and
                                             pressure alerts.</li>
                                     </ul>
-                                    <a href="{{ route('contact') }}" class="customBtn01 customBtn01Small">Contact Our Expert</a> <a href="#"
-                                        class="customBtn01 customBtn01Small">Know More</a>
+                                    <a href="{{ route('contact') }}" class="customBtn01 customBtn01Small">Contact Our
+                                        Expert</a>
                                 </div>
                             </div>
                         </div>
                         <div class="manufactProductCatBlock">
                             <div class="row">
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('formulation_development') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/formulation-development.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Formulation Development
-                                                            </h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Formulation Development</h4>
-                                                            <p>Optimized formulations of active pharmaceutical ingredients
-                                                                are vital to ensure therapeutic performance and patient
-                                                                safety in clinical trials.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('tablet_manufacturing') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/tablet-manufacturing.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Tablet Manufacturing</h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Tablet Manufacturing</h4>
-                                                            <p>With advanced equipment & techniques, our manufacturing
-                                                                experts ensure successful tablet development from small to
-                                                                commercial-scale batches.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
+
+                                @foreach($blogs as $blog)
+                                    <div class="col-lg-3 col-md-4 col-sm-6">
+                                        <div class="manufactProductCatList">
+                                            <div class="manufactProductCat">
+                                                <a href="{{ route('blogs.show', $blog->slug) }}">
+                                                    <div class="flip-card">
+                                                        <div class="flip-card-inner">
+
+                                                            <!-- FRONT -->
+                                                            <div class="flip-card-front">
+                                                                <img src="{{ asset('storage/' . $blog->image) }}"
+                                                                    alt="{{ $blog->title }}">
+                                                                <h5 class="d-flex align-items-center">
+                                                                    {{ $blog->title }}
+                                                                </h5>
+                                                            </div>
+
+                                                            <!-- BACK -->
+                                                            <div class="flip-card-back">
+                                                                <h4>{{ $blog->title }}</h4>
+                                                                <p>
+                                                                    {{ $blog->description }}
+                                                                </p>
+                                                                <p class="text-uppercase">Learn More</p>
+                                                            </div>
+
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('liquid_capsules') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/liquid-filled-capsules.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Liquid-filled capsules
-                                                            </h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Liquid-filled capsules</h4>
-                                                            <p>Liquid-filled capsules offer scientists an effective way to
-                                                                formulate poorly soluble drugs and supplements while
-                                                                minimizing development time & costs.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('spray_dried') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/spray-dried-dispersions.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Spray Dried Dispersions
-                                                            </h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Spray Dried Dispersions</h4>
-                                                            <p>Amorphous solid dispersions (ASDs) enhance solubility and
-                                                                bioavailability. Spray-dried dispersions provide scalability
-                                                                and commercialization.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('powder_filled') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/powder-filled-capsules.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Powder-Filled Capsules
-                                                            </h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Powder-Filled Capsules</h4>
-                                                            <p>From formulation development to clinical studies and
-                                                                commercialization, we ensure a smooth and successful path to
-                                                                market.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('blinded_study') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/over-encapsulation.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Over-Encapsulation/Blinded
-                                                                Study Materials</h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Over-Encapsulation/Blinded Study Materials</h4>
-                                                            <p>Over-encapsulation is the process of masking a solid dosage
-                                                                form, like a tablet or capsule, within an additional capsule
-                                                                shell.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('potent_handling') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/potent-handling-capabilities.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Potent Handling
-                                                                Capabilities</h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Potent Handling Capabilities</h4>
-                                                            <p>Manufacturing potent active pharmaceutical ingredients safely
-                                                                requires systems and equipment that protect personnel, the
-                                                                environment, and the facility.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('nanomilling') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/wet-nanomilling-liquid.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Wet Nanomilling and Liquid
-                                                                Vial Filling</h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Wet Nanomilling and Liquid Vial Filling</h4>
-                                                            <p>Using advanced equipment like the Netzsch DeltaVita 15-300
-                                                                mill for wet milling APIs to nano size, we can formulate the
-                                                                most complex drug compounds.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('terminal_sterilization') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/terminal-sterilization.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Terminal Sterilization
-                                                            </h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Terminal Sterilization</h4>
-                                                            <p>Injectable drugs require strict quality and sterility. Our
-                                                                Grade C suites enable the development of products that can
-                                                                be terminally sterilized post-manufacture.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('other_manufacturing') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/other-manufacturing.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Other Manufacturing</h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Other Manufacturing</h4>
-                                                            <p>Our team has created formulations, designed equipment setups,
-                                                                validated processes and methods, and secured regulatory
-                                                                approval for dosage forms.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
+
                             </div>
                         </div>
+
                     </div>
                     <div class="col-md-12">
                         <div
                             class="infoBlockPharma d-flex align-items-stretch justify-content-start align-items-center bg-white">
-                            <div class="order-md-1 order-0"><img src="images/analytical-lab-testing.jpg" alt=""></div>
+                            <div class="order-md-1 order-0"><img src="{{ asset('images/analytical-lab-testing.jpg') }}"
+                                    alt=""></div>
                             <div
                                 class="infoBlockPosition infoBlockPositionLeft order-md-0 order-1 d-flex align-items-center">
                                 <div>
@@ -445,119 +235,17 @@
                                         activities, including the development of critical analytical methodologies, cleaning
                                         verification methods for detecting active pharmaceutical ingredients on
                                         manufacturing equipment, and assay or related substance testing for APIs.</p>
-                                    <a href="{{ route('contact') }}" class="customBtn01 customBtn01Small">Contact Our Expert</a> <a href="#"
-                                        class="customBtn01 customBtn01Small">Know More</a>
+                                    <a href="{{ route('contact') }}" class="customBtn01 customBtn01Small">Contact Our
+                                        Expert</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="manufactProductCatBlock">
-                            <div class="row">
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('packaging_components') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/packaging-components.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">APIs, Excipients, and
-                                                                Packaging Components</h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>APIs, Excipients, and Packaging Components</h4>
-                                                            <p>We perform all required USP/NF and EP tests on received
-                                                                materials, ensuring quick release through our analytical
-                                                                team.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('product_release_testing') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/product-release-testing.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Pharmaceutical Product
-                                                                Release Testing</h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Pharmaceutical Product Release Testing</h4>
-                                                            <p>We provide a comprehensive range of analytical methods to
-                                                                assess your small molecule APIs and drug formulations.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('method_development') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/ich-stability-storage.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">Method Development,
-                                                                Qualification, and Validation</h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>Method Development, Qualification, and Validation</h4>
-                                                            <p>With advanced tools and expertise, we validate analytical
-                                                                methods across formulations, helping you achieve faster
-                                                                method approval.</p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="manufactProductCatList">
-                                        <div class="manufactProductCat">
-                                            <a href="{{ route('storage_testing') }}">
-                                                <div class="flip-card">
-                                                    <div class="flip-card-inner">
-                                                        <div class="flip-card-front">
-                                                            <img src="images/pharmaceutical-manufacturing/formulation-development.jpg"
-                                                                alt="">
-                                                            <h5 class="d-flex align-items-center">ICH Stability Storage And
-                                                                Testing</h5>
-                                                        </div>
-                                                        <div class="flip-card-back">
-                                                            <h4>ICH Stability Storage And Testing</h4>
-                                                            <p>Our advanced analytical labs and ICH-compliant stability
-                                                                chambers are fully equipped to meet all your project needs.
-                                                            </p>
-                                                            <p class="text-uppercase"> Learn More</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="col-md-12">
                         <div
                             class="infoBlockPharma d-flex align-items-stretch justify-content-start align-items-center bg-white">
-                            <div><img src="images/integrated-cro-cdmo-services.jpg" alt=""></div>
+                            <div><img src="{{ asset('images/integrated-cro-cdmo-services.jpg') }}" alt=""></div>
                             <div class="infoBlockPosition infoBlockPositionRight d-flex align-items-center">
                                 <div>
                                     <h4>Integrated CRO/CDMO Services for Rigorous and Faster Drug Development</h4>
@@ -570,8 +258,8 @@
                                         clinical results are successful, we scale up and optimize manufacturing. With a
                                         holistic view of your program, we anticipate challenges, minimize risks, shorten
                                         timelines, and reduce overall development costs.</p>
-                                    <a href="{{ route('contact') }}" class="customBtn01 customBtn01Small">Contact Our Expert</a> <a href="#"
-                                        class="customBtn01 customBtn01Small">Know More</a>
+                                    <a href="{{ route('contact') }}" class="customBtn01 customBtn01Small">Contact Our
+                                        Expert</a>
                                 </div>
                             </div>
                         </div>
@@ -591,7 +279,7 @@
                     </div>
                     <div class="mapSection">
                         <div class="row">
-                            <div class="col-lg-6 mapBg flexCol p-0"><img src="images/ufc-map.png" alt=""
+                            <div class="col-lg-6 mapBg flexCol p-0"><img src="{{ asset('images/ufc-map.png') }}" alt=""
                                     class="imgResponsive"></div>
                             <div class="col-lg-6 flexCol">
                                 <ul class="countryListWedoBussiness">
@@ -652,20 +340,20 @@
         </div>
     </section>
     <!-- <section class="contentContainer signUpNewsletterBlock text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Sign up for exclusive content</h2>
-                    <p>Join our list of 30,000+ VIP members and have access to our exclusive content.</p>
-                    <div class="signUpNewsletter">
-                        <form>
-                            <input type="text" value="" placeholder="Enter your email address here">
-                            <input type="submit" value="Subscribe Now!" class="btn customBtn01" name="">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2>Sign up for exclusive content</h2>
+                                    <p>Join our list of 30,000+ VIP members and have access to our exclusive content.</p>
+                                    <div class="signUpNewsletter">
+                                        <form>
+                                            <input type="text" value="" placeholder="Enter your email address here">
+                                            <input type="submit" value="Subscribe Now!" class="btn customBtn01" name="">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
 
 @endsection

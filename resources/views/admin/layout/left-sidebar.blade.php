@@ -4,7 +4,7 @@
 
         <ul class="navbar-nav theme-brand flex-row  d-none d-lg-flex">
             <li class="nav-item d-flex">
-                <a href="index.html" class="navbar-brand">
+                <a href="{{route('home')}}" class="navbar-brand">
                     <img src="{{asset('images/logo-upi.png')}}" class="img-fluid" alt="logo">
                 </a>
 
@@ -30,10 +30,32 @@
 
             </li>
             <li class="menu">
+                <a href="#categories" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-sun"></i>
+                        <span>Category </span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="categories" data-parent="#accordionExample">
+                    <li>
+                        <a href="{{ route("categories.create") }}"> Add Category</a>
+                    </li>
+                    <li>
+                        <a href="{{ route("categories.index") }}"> All Categories </a>
+                    </li>
+
+
+
+                </ul>
+            </li>
+            <li class="menu">
                 <a href="#products" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <i class="flaticon-sun"></i>
-                        <span>Products </span>
+                        <span>Chemicals </span>
                     </div>
                     <div>
                         <i class="flaticon-right-arrow"></i>
@@ -41,15 +63,13 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="products" data-parent="#accordionExample">
                     <li>
-                        <a href="{{ route("add_product") }}"> Add Product</a>
+                        <a href="{{ route("add_chemical") }}"> Add Chemical</a>
                     </li>
                     <li>
-                        <a href="{{ route("all_product") }}"> All Products </a>
+                        <a href="{{ route("all_product") }}"> All Chemicals </a>
                     </li>
 
-                    <!-- <li>
-                        <a href="#"> Inactive </a>
-                    </li> -->
+
 
                 </ul>
             </li>
@@ -153,7 +173,7 @@
             </li>
 
 
-                        <li class="menu">
+            <!-- <li class="menu">
                 <a href="#settings" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <i class="flaticon-elements"></i>
@@ -164,19 +184,62 @@
                     </div>
                 </a>
                 <ul class="collapse submenu list-unstyled" id="settings" data-parent="#accordionExample">
-                    <!-- <li>
-                        <a href="#"> Add Discount</a>
-                    </li> -->
+                  
 
                     <li>
                         <a href="{{ route('settings') }}"> All Settings</a>
                     </li>
-                    <!-- <li>
-                        <a href="#"> Inactive Careers </a>
-                    </li> -->
+                
 
                 </ul>
 
+            </li> -->
+
+
+            <li class="menu">
+                <a href="#blogs" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-sun"></i>
+                        <span>Blogs </span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="blogs" data-parent="#accordionExample">
+                    <li>
+                        <a href="{{ route("blogs.create") }}"> Add Blog</a>
+                    </li>
+                    <li>
+                        <a href="{{ route("blogs.index") }}"> All Blogs </a>
+                    </li>
+
+
+
+                </ul>
+            </li>
+
+                        <li class="menu">
+                <a href="#events" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-sun"></i>
+                        <span>Events </span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="events" data-parent="#accordionExample">
+                    <li>
+                        <a href="{{ route("events.create") }}"> Add Event</a>
+                    </li>
+                    <li>
+                        <a href="{{ route("events.index") }}"> All Event </a>
+                    </li>
+
+
+
+                </ul>
             </li>
         </ul>
     </nav>

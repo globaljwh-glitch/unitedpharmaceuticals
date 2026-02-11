@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon/favicon-32x32.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/favicon/apple-touch-icon.png') }}">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,20 +30,21 @@
             <div class="d-flex align-items-center justify-content-end">
                 <ul class="topInfoList mb-0">
                     <li><a href="{{ route('career') }}">Careers</a></li>
-                    <li><a href="{{ route('coming.soon', 'events') }}">Events</a></li>
-                    <li><a href="{{ route('coming.soon', 'news') }}">News</a></li>
+                    <li><a href="{{ route('events') }}">Events</a></li>
+                    <!-- <li><a href="{{ route('coming.soon', 'news') }}">News</a></li> -->
                     <li><a href="{{ route('sample') }}">Samples</a></li>
                     <li><a href="{{ route('enquiry') }}">Inquiries</a></li>
                 </ul>
-
-                <div class="searchSite d-flex">
-                    <label class="screen-reader-text" for="searchSite"></label>
-                    <input type="text" class="search-field" name="searchSite" id="searchSite" placeholder="Search..."
-                        autocomplete="off">
-                    <button id="searchsubmit" class="search-submit">
-                        <i class="fa-solid fa-search"></i>
-                    </button>
-                </div>
+                <form method="GET" action="{{ route('all_chemicals') }}">
+                    <div class="searchSite d-flex">
+                        <label class="screen-reader-text" for="searchSite"></label>
+                        <input type="text" class="search-field" name="searchProduct" id="searchSite"
+                            placeholder="Search..." autocomplete="off">
+                        <button id="searchsubmit" class="search-submit" type="submit">
+                            <i class="fa-solid fa-search"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

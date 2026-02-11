@@ -21,7 +21,7 @@
             <div class="card shadow-sm border-0">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover table-striped align-middle">
+                        <table id="zero-config" class="table table-hover table-striped align-middle">
                             <thead class="thead-dark">
                                 <tr>
                                     <th>#</th>
@@ -33,9 +33,17 @@
                             <tbody>
                                 @forelse($careers as $career)
                                     <tr>
-                                        <td>{{ $career->id }}</td>
+                                        <td>{{ $loop->iteration }}</td>
+
                                         <td>{{ $career->title }}</td>
-                                        <td>{{ $career->status }}</td>
+                                        <td>
+                                            @if($career->status == 1)
+                                                <span class="badge badge-success">Active</span>
+                                            @else
+                                                <span class="badge badge-danger">Inactive</span>
+                                            @endif
+                                        </td>
+
                                         <td class="text-center">
                                             <a href="{{ route('career.edit', $career->id) }}" class="btn btn-sm btn-warning">
                                                 <i class="fas fa-edit"></i> Edit
@@ -65,4 +73,5 @@
             </div>
         </div>
     </div>
+
 @endsection

@@ -19,7 +19,7 @@
             <div class="card shadow-sm border-0">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover table-striped align-middle">
+                        <table id="zero-config" class="table table-hover table-striped align-middle">
                             <thead class="thead-dark">
                                 <tr>
                                     <th>#</th>
